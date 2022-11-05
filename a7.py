@@ -11,20 +11,17 @@ def isPalindrome(sentence):
     or False otherwise."""
     stk = Stack()  # Creates a stack called stk.
     sentence = sentence.replace(" ", "")  # removes spaces from sentence
-    sentence = sentence.lower()
-    comparative_sentence = []
+    sentence = sentence.lower()  # turns sentence into lower case
+    reversed_sentence = []  # will list of characters in sentence but reversed
 
-    for character in sentence:
+    for character in sentence:  # pushes each character from sentence in the stk stack
         stk.push(character)
-    for i in range(len(sentence)):
-        comparative_sentence.append(stk.pop())
+    for i in range(len(sentence)):  # pops each character from stk into the reverse_sentence list (reversing the order of the OG sentence)
+        reversed_sentence.append(stk.pop())
 
-    comparative_sentence = "".join(comparative_sentence)
+    reversed_sentence = "".join(reversed_sentence)  # converts list into a string
 
-    if sentence == comparative_sentence:
-        return True
-
-    return False
+    return sentence == reversed_sentence  # returns true if sentence is a palindrome, false if not
 
 
 # *** Do not modify main() ***
