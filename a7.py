@@ -1,6 +1,6 @@
 """
 File: a7.py
-
+Group: Seth Michel and Dillon Mathew
 """
 
 from stack import Stack
